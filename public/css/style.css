@@ -1,0 +1,135 @@
+.nav-link{
+    color: black !important;
+    font-size: 1rem;
+    transition: all .2s ease;
+}
+
+.nav-link:hover{
+    color: #717fe0 !important;
+}
+
+.nav-icons i{
+    font-size: 1.5rem;
+}
+
+.ico{
+    position: relative;
+}
+
+.num{
+    position: absolute;
+    background-color: #717fe0;
+    top: .2rem;
+    right: .3rem;
+    padding: .1rem .4rem;
+    font-size: .6rem;
+    border-radius: 50%;
+    color: white;
+}
+
+.nav-icons:hover i{
+    color: #717fe0;
+}
+
+.active{
+    color: #717fe0 !important;
+}
+
+.footer-heading{
+    color: white;
+    font-size: 2.3rem;
+}
+
+.foot-link{
+    color: rgb(219, 214, 214);
+    transition: all 2 ease-in-out;
+    font-size: 1.1rem;
+    transition: all .3s ease-out;
+}
+
+.foot-link:hover{
+    text-decoration: none;
+    color: #717fe0;
+}
+
+.foot-info{
+    color: rgb(236, 235, 235);
+    text-align: justify;
+}
+
+.foot-social{
+    font-size: 1.3rem;
+    color: white;
+    transition: all .5s ease-in-out;
+}
+
+.foot-social:hover{
+    color: #717fe0;
+}
+
+.img-fluid{
+    height: 90vh !important;   
+}
+
+.banner{
+    height: 40vh;
+    border: 1px solid #e6e6e6;
+    transition: all 1s ease-in;
+}
+
+.banner-location{
+    position: absolute;
+    top: 20%;
+    z-index: 1;
+    transition: all .5s ease-in-out;
+}
+
+.banner-overlay{
+    background-color: #7180e0c2;
+    position: absolute;
+    top: 0;
+    height: 40vh;
+    width: 95%;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+
+}
+
+.banner-link{
+    position: absolute;
+    bottom: 10%;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-decoration: underline;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+.banner-link a{
+    color: white;
+}
+
+.banner:hover .banner-link{
+    animation-name: bounce;
+    animation-timing-function: ease;
+}
+
+.banner:hover .banner-overlay{
+    visibility: visible;
+}
+
+.banner:hover .banner-location{
+    color: white;
+}
+
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-100px); }
+    100% { transform: translateY(0); }
+}
+
+.product-overview{
+    color: black;
+    font-weight: bolder;
+    font-size: 2.6rem;
+}
