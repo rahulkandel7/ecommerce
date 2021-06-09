@@ -223,6 +223,9 @@
     <div class="col-md-3">
       <div class="product-image">
         <img src="{{ asset('images/blackkurta.jpg') }}" alt="" class="w-100 p-img">
+        <div class="overview d-flex justify-content-center">
+          <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
+        </div>
       </div>
       <p class="product-title mt-2"><a href="">Black Kurta</a></p>
       <p class="product-price">Rs 3000</p>
@@ -274,6 +277,7 @@
     <div class="col-md-3">
       <div class="product-image">
         <img src="{{ asset('images/party.jpg') }}" alt="" class="w-100 p-img">
+        
       </div>
       <p class="product-title mt-2">
         <a href="">Party Dress</a>
