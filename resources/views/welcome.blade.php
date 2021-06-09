@@ -188,44 +188,11 @@
     <div class="col-md-3">
       <div class="product-image">
         <img src="{{ asset('images/blackkurta.jpg') }}" alt="" class="w-100 p-img">
-      </div>
-      <p class="product-title mt-2"><a href="">Black Kurta</a></p>
-      <p class="product-price">Rs 3000</p>
-    </div>
 
-    <div class="col-md-3">
-      <div class="product-image">
-        <img src="{{ asset('images/shirt.jpeg') }}" alt="" class="w-100 p-img">
-      </div>
-      <p class="product-title mt-2"><a href="">Shirt</a></p>
-      <p class="product-price">Rs 1000</p>
-    </div>
-
-    <div class="col-md-3">
-      <div class="product-image">
-        <img src="{{ asset('images/party.jpg') }}" alt="" class="w-100 p-img">
-      </div>
-      <p class="product-title mt-2"><a href="">Party Dress</a></p>
-      <p class="product-price">Rs 5000</p>
-    </div>
-
-    <div class="col-md-3">  
-      <div class="product-image">
-        <img src="{{ asset('images/zebraone.jpg') }}" alt="" class="w-100 p-img">
-      </div>
-      <p class="product-title mt-2"><a href="">B/W onepiece</a></p>
-      <p class="product-price">Rs 1000</p>
-    </div>
-  </div>
-
-  <div class="row mb-3">
-
-    <div class="col-md-3">
-      <div class="product-image">
-        <img src="{{ asset('images/blackkurta.jpg') }}" alt="" class="w-100 p-img">
         <div class="overview d-flex justify-content-center">
           <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
         </div>
+
       </div>
       <p class="product-title mt-2"><a href="">Black Kurta</a></p>
       <p class="product-price">Rs 3000</p>
@@ -234,6 +201,11 @@
     <div class="col-md-3">
       <div class="product-image">
         <img src="{{ asset('images/shirt.jpeg') }}" alt="" class="w-100 p-img">
+
+        <div class="overview d-flex justify-content-center">
+          <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
+        </div>
+
       </div>
       <p class="product-title mt-2"><a href="">Shirt</a></p>
       <p class="product-price">Rs 1000</p>
@@ -242,6 +214,11 @@
     <div class="col-md-3">
       <div class="product-image">
         <img src="{{ asset('images/party.jpg') }}" alt="" class="w-100 p-img">
+
+        <div class="overview d-flex justify-content-center">
+          <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
+        </div>
+
       </div>
       <p class="product-title mt-2"><a href="">Party Dress</a></p>
       <p class="product-price">Rs 5000</p>
@@ -250,6 +227,11 @@
     <div class="col-md-3">  
       <div class="product-image">
         <img src="{{ asset('images/zebraone.jpg') }}" alt="" class="w-100 p-img">
+
+        <div class="overview d-flex justify-content-center">
+          <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
+        </div>
+
       </div>
       <p class="product-title mt-2"><a href="">B/W onepiece</a></p>
       <p class="product-price">Rs 1000</p>
@@ -261,6 +243,11 @@
     <div class="col-md-3">
       <div class="product-image">
         <img src="{{ asset('images/blackkurta.jpg') }}" alt="" class="w-100 p-img">
+
+        <div class="overview d-flex justify-content-center">
+          <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
+        </div>
+
       </div>
       <p class="product-title mt-2"><a href="">Black Kurta</a></p>
       <p class="product-price">Rs 3000</p>
@@ -269,6 +256,11 @@
     <div class="col-md-3">
       <div class="product-image">
         <img src="{{ asset('images/shirt.jpeg') }}" alt="" class="w-100 p-img">
+
+        <div class="overview d-flex justify-content-center">
+          <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
+        </div>
+
       </div>
       <p class="product-title mt-2"><a href="">Shirt</a></p>
       <p class="product-price">Rs 1000</p>
@@ -277,11 +269,69 @@
     <div class="col-md-3">
       <div class="product-image">
         <img src="{{ asset('images/party.jpg') }}" alt="" class="w-100 p-img">
+
+        <div class="overview d-flex justify-content-center">
+          <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
+        </div>
+
+      </div>
+      <p class="product-title mt-2"><a href="">Party Dress</a></p>
+      <p class="product-price">Rs 5000</p>
+    </div>
+
+    <div class="col-md-3">  
+      <div class="product-image">
+        <img src="{{ asset('images/zebraone.jpg') }}" alt="" class="w-100 p-img">
+
+        <div class="overview d-flex justify-content-center">
+          <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
+        </div>
+
+      </div>
+      <p class="product-title mt-2"><a href="">B/W onepiece</a></p>
+      <p class="product-price">Rs 1000</p>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+
+    <div class="col-md-3">
+      <div class="product-image">
+        <img src="{{ asset('images/blackkurta.jpg') }}" alt="" class="w-100 p-img">
+
+        <div class="overview d-flex justify-content-center">
+          <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
+        </div>
+
+      </div>
+      <p class="product-title mt-2"><a href="">Black Kurta</a></p>
+      <p class="product-price">Rs 3000</p>
+    </div>
+
+    <div class="col-md-3">
+      <div class="product-image">
+        <img src="{{ asset('images/shirt.jpeg') }}" alt="" class="w-100 p-img">
+
+        <div class="overview d-flex justify-content-center">
+          <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
+        </div>
+
+      </div>
+      <p class="product-title mt-2"><a href="">Shirt</a></p>
+      <p class="product-price">Rs 1000</p>
+    </div>
+
+    <div class="col-md-3">
+      <div class="product-image">
+        <img src="{{ asset('images/party.jpg') }}" alt="" class="w-100 p-img">
+
+        <div class="overview d-flex justify-content-center">
+          <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
+        </div>
         
       </div>
       <p class="product-title mt-2">
         <a href="">Party Dress</a>
-        <i style="text-align: end">hi</i>
       </p>
       <p class="product-price">Rs 5000</p>
     </div>
@@ -289,6 +339,11 @@
     <div class="col-md-3">  
       <div class="product-image">
         <img src="{{ asset('images/zebraone.jpg') }}" alt="" class="w-100 p-img">
+
+        <div class="overview d-flex justify-content-center">
+          <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
+        </div>
+
       </div>
       <p class="product-title mt-2"><a href="">B/W onepiece</a></p>
       <p class="product-price">Rs 1000</p>

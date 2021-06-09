@@ -259,9 +259,37 @@
     position: relative;
     bottom: 20%;
     z-index: 2;
+    visibility: hidden;
+    transition: all .2s ease;
 }
 
 .btn-overview{
     color: white;
     border-radius: 20px;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+
+.product-image:hover .overview{
+    visibility: visible;
+}
+
+@keyframes slideup {
+    0%   { 
+        transform: translateY(100px); 
+        opacity: 0;
+     }
+    50%  { 
+        transform: translateY(-10px); 
+        opacity: .5;
+    }
+    100% { 
+        transform: translateY(0);
+        opacity: 1;
+     }
+}
+
+.product-image:hover .btn-overview{
+    animation-name: slideup;
+    animation-timing-function: ease;
 }
