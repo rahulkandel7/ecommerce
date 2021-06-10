@@ -21,3 +21,27 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/quicklook', function () {
+    return view('quicklook');
+});
+
+Route::get('/cart', function () {
+    return view('cart');
+});
+
+Route::get('/favroite', function () {
+    return view('favroite');
+});
+
+Route::get('/shop', function () {
+    return view('shop');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});

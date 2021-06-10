@@ -190,7 +190,7 @@
         <img src="{{ asset('images/blackkurta.jpg') }}" alt="" class="w-100 p-img">
 
         <div class="overview d-flex justify-content-center">
-          <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
+          <a href="" class="btn btn-outline-primary btn-overview">Quick Look</a>
         </div>
 
       </div>
@@ -203,7 +203,7 @@
         <img src="{{ asset('images/shirt.jpeg') }}" alt="" class="w-100 p-img">
 
         <div class="overview d-flex justify-content-center">
-          <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
+          <a href="" class="btn btn-outline-primary btn-overview">Quick Look</a>
         </div>
 
       </div>
@@ -216,7 +216,7 @@
         <img src="{{ asset('images/party.jpg') }}" alt="" class="w-100 p-img">
 
         <div class="overview d-flex justify-content-center">
-          <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
+          <a href="" class="btn btn-outline-primary btn-overview">Quick Look</a>
         </div>
 
       </div>
@@ -229,7 +229,7 @@
         <img src="{{ asset('images/zebraone.jpg') }}" alt="" class="w-100 p-img">
 
         <div class="overview d-flex justify-content-center">
-          <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
+          <a href="" class="btn btn-outline-primary btn-overview">Quick Look</a>
         </div>
 
       </div>
@@ -245,7 +245,7 @@
         <img src="{{ asset('images/blackkurta.jpg') }}" alt="" class="w-100 p-img">
 
         <div class="overview d-flex justify-content-center">
-          <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
+          <a href="" class="btn btn-outline-primary btn-overview">Quick Look</a>
         </div>
 
       </div>
@@ -258,7 +258,7 @@
         <img src="{{ asset('images/shirt.jpeg') }}" alt="" class="w-100 p-img">
 
         <div class="overview d-flex justify-content-center">
-          <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
+          <a href="" class="btn btn-outline-primary btn-overview">Quick Look</a>
         </div>
 
       </div>
@@ -271,7 +271,7 @@
         <img src="{{ asset('images/party.jpg') }}" alt="" class="w-100 p-img">
 
         <div class="overview d-flex justify-content-center">
-          <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
+          <a href="" class="btn btn-outline-primary btn-overview">Quick Look</a>
         </div>
 
       </div>
@@ -284,7 +284,7 @@
         <img src="{{ asset('images/zebraone.jpg') }}" alt="" class="w-100 p-img">
 
         <div class="overview d-flex justify-content-center">
-          <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
+          <a href="" class="btn btn-outline-primary btn-overview">Quick Look</a>
         </div>
 
       </div>
@@ -300,7 +300,7 @@
         <img src="{{ asset('images/blackkurta.jpg') }}" alt="" class="w-100 p-img">
 
         <div class="overview d-flex justify-content-center">
-          <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
+          <a href="" class="btn btn-outline-primary btn-overview">Quick Look</a>
         </div>
 
       </div>
@@ -313,7 +313,7 @@
         <img src="{{ asset('images/shirt.jpeg') }}" alt="" class="w-100 p-img">
 
         <div class="overview d-flex justify-content-center">
-          <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
+          <a href="" class="btn btn-outline-primary btn-overview">Quick Look</a>
         </div>
 
       </div>
@@ -326,7 +326,7 @@
         <img src="{{ asset('images/party.jpg') }}" alt="" class="w-100 p-img">
 
         <div class="overview d-flex justify-content-center">
-          <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
+          <a href="" class="btn btn-outline-primary btn-overview">Quick Look</a>
         </div>
         
       </div>
@@ -341,7 +341,7 @@
         <img src="{{ asset('images/zebraone.jpg') }}" alt="" class="w-100 p-img">
 
         <div class="overview d-flex justify-content-center">
-          <a href="" class="btn btn-outline-primary btn-overview">Overview</a>
+          <a href="" class="btn btn-outline-primary btn-overview">Quick Look</a>
         </div>
 
       </div>

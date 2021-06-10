@@ -293,3 +293,225 @@
     animation-name: slideup;
     animation-timing-function: ease;
 }
+
+/* 
+Login Css
+*/
+
+.login-heading{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.form-border{
+    border-radius: 30px;
+}
+
+.col-form-label{
+    font-weight: bold;
+}
+
+.form-btn-border{
+    border-radius: 30px;
+    padding: .4rem 2.8rem;
+}
+
+/* 
+Overlook css
+*/
+
+fieldset.active {
+    display: block !important
+}
+
+fieldset {
+    display: none
+}
+
+.pic0 {
+    width: 400px;
+    height: 500px;
+    margin-left: 85px;
+    margin-right: auto;
+    display: block
+}
+
+.product-pic {
+    padding-left: auto;
+    padding-right: auto;
+    width: 100%
+}
+
+.thumbnails {
+    position: absolute
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+.tb {
+    width: 62px;
+    height: 62px;
+    border: 1px solid grey;
+    margin: 2px;
+    opacity: 0.4;
+    cursor: pointer
+}
+
+.tb-active {
+    opacity: 1
+}
+
+.thumbnail-img {
+    width: 60px;
+    height: 60px
+}
+
+@media screen and (max-width: 768px) {
+    .pic0 {
+        width: 250px;
+        height: 350px
+    }
+}
+
+.overlook-price{
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.overlook-des{
+    text-align: justify;
+}
+
+.size{
+    font-size: 1rem;
+}
+
+.o-select{
+    background-color: white;
+    border-color: white;
+    height: auto !important;
+}
+
+.quantity{
+    padding: .2rem .5rem;
+    background-color: #717fe0;
+    border: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.q-amt{
+    padding: 0.3rem 0.5rem;
+}
+
+.q-box{
+    background-color: rgb(214, 213, 210);
+    padding: 0;
+    margin: 0;
+    height: 32px;
+}
+
+.overlook-fav {
+    font-size: 2rem;
+}
+
+.overlook-fav:hover{
+    content: 'hey';
+}
+
+/*
+cart page 
+*/
+.cart-table{
+    border: 2px solid #dee2e6;
+}
+
+.table td{
+    vertical-align: middle !important;
+}
+
+.cart-qty-tbl{
+    padding: 0rem !important; 
+    vertical-align: middle !important;
+    border-top: none !important;       
+}
+
+.cart-delete i{
+    color: red;
+    font-size: 1.2rem;
+}
+
+.cart-total{
+    border: 2px solid #dee2e6;
+}
+
+.cart-line{
+    border-top: 2px dashed #dee2e6;
+}
+
+.shipping-address{
+    font-size: .9rem;
+    color: #969797;
+}
+
+.favroite-title{
+    font-size: 1.6rem;
+    color: rgb(34, 33, 33);
+}
+
+.fav{
+    position: absolute;
+    top: 0%;
+    right: 12%;
+}
+
+/*
+Contact Us 
+*/
+
+.contact{
+    background-image: url('../images/contact.webp');
+    height: 20vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact-heading{
+    color: white;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 50px;
+}
+
+.bor{
+    border: 2px solid #dee2e6;
+}
+.bor-left{
+    border-left: 2px solid #dee2e6;
+}
+
+.message{
+    letter-spacing: .3rem;
+    font-weight: bold;
+}
+
+.contact-info{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.contact-des{
+    color: rgb(90, 87, 87);
+}
+
+.about-des{
+    text-align: justify;
+    color: rgb(90, 87, 87);
+    
+}

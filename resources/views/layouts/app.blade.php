@@ -20,9 +20,8 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
-
-    <!-- Fontawesome Links -->
-    <script src="https://kit.fontawesome.com/535ccb550f.js" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
 
     <!-- Animate Css -->
     <link
@@ -170,5 +169,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="{{ asset('js/index.js') }}" defer></script>
 </body>
 </html>
