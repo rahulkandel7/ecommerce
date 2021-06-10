@@ -102,6 +102,8 @@
                                     </a>
     
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a href="" class="dropdown-item ">Profile</a>
+
                                         <a class="dropdown-item" href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
@@ -166,6 +168,11 @@
                         </p>
                     </div>
                 </div>
+            </div>
+            <div class="container d-flex justify-content-center">
+                <p class="copy-section">
+                    Copyright &copy; 2021 All rights reserved | Made By <a href="www.bitmapitsolutions.com">BITS</a>
+                </p>
             </div>
         </div>
     </footer>
