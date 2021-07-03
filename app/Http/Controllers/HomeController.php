@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,29 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $categories = Category::all();
+        $products = Product::all();
+        return view('home', compact('products', 'categories'));
+    }
+
+    public function quicklook(Product $product)
+     {
+        $sizes = explode(',', $product->sizes);
+        $colors = explode(',', $product->colors);
+        return view('quicklook', compact('product','sizes','colors'));
+    }
+
+    public function cart () {
+        return view('cart');
+    }
+
+    public function favroite () {
+        return view('favroite');
+    }
+
+    
+
+    public function profile() {
+        return view('profile');
     }
 }

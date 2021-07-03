@@ -144,10 +144,13 @@
     color: rgb(68, 66, 66);
     font-size: 1rem;
     transition: all .1s ease;
+    border: none;
+    background-color: transparent;
 }
 
 .product-link:hover{
     color: #717fe0;
+    text-decoration: underline;
 }
 
 .filter{
@@ -404,11 +407,12 @@ fieldset {
 }
 
 .q-amt{
-    padding: 0.3rem 0.5rem;
+    width: 20%;
+    padding: 0.1rem 0.2rem;
 }
 
 .q-box{
-    background-color: rgb(214, 213, 210);
+
     padding: 0;
     margin: 0;
     height: 32px;
@@ -518,4 +522,9 @@ Contact Us
 
 .copy-section{
     color: rgb(182, 179, 179);
+}
+
+.delete-btn{
+    background-color: transparent;
+    border: none;
 }

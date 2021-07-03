@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -50,17 +50,22 @@
                 <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                           <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link {{ (request()->is('/')) ? 'active' : '' }}" aria-current="page" href="/">Home</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#">Shop</a>
+                            <a class="nav-link {{ Route::currentRouteNamed('shop') ? 'active' : '' }}" href="{{route('shop')}}">Shop</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
+                            <a class="nav-link {{ Route::currentRouteNamed('about') ? 'active' : '' }} href="{{route('about')}}">About Us</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>
+                            <a class="nav-link {{ Route::currentRouteNamed('contact') ? 'active' : '' }}" href="{{route('contact')}}">Contact Us</a>
                           </li>
+                          @if(auth()->user() && auth()->user()->role == "Admin")
+                          <li class="nav-item">
+                            <a class="nav-link" href="{{ route('admin.categories.index') }}">Categories</a>
+                          </li>
+                          @endif
                           
                         </ul>
                         <ul class="navbar-nav ml-auto">
@@ -68,32 +73,32 @@
                             @guest
                                 @if (Route::has('login'))
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                        <a class="nav-link {{ Route::currentRouteNamed('login') ? 'active' : '' }}" href="{{ route('login') }}">{{ __('Login') }}</a>
                                     </li>
                                 @endif
     
                                 @if (Route::has('register'))
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                        <a class="nav-link {{ Route::currentRouteNamed('register') ? 'active' : '' }}" href="{{ route('register') }}">{{ __('Register') }}</a>
                                     </li>
                                 @endif
                             @else
                                 <div class="ico">
                                     <li class="nav-item mr-2">
-                                        <a href="" class="nav-link nav-icons"><i class="fab fa-opencart"></i></a>
+                                        <a href="{{route('carts.index')}}" class="nav-link nav-icons {{ Route::currentRouteNamed('carts.index') ? 'active' : '' }}"><i class="fab fa-opencart"></i></a>
                                     </li>
                                     <div class="num">
-                                        0
+                                        {{  App\Models\Cart::where('user_id','=',auth()->user()->id)->count() }}
                                     </div>
                                 </div>
 
                                 <div class="ico">
                                     <li class="nav-item mr-2">
-                                        <a href="" class="nav-link nav-icons"><i class="far fa-heart"></i></a>
+                                        <a href="/favroites" class="nav-link nav-icons {{ (request()->is('/favroites')) ? 'active' : '' }}"><i class="far fa-heart"></i></a>
                                     </li>
-                                    <div class="num">
-                                        9
-                                    </div>
+                                    {{-- <div class="num">
+                                        {{  App\Models\Favroite::where('user_id','=',auth()->user()->id)->count() }}
+                                    </div> --}}
                                 </div>
                                 
                                 <li class="nav-item dropdown">
