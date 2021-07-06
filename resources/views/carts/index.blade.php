@@ -2,15 +2,6 @@
 
 @section('content')
     <div class="container mt-4">
-      @if (session('sucess'))
-        <div class="alert alert-primary alert-dismissible fade show" role="alert">
-          <strong>{{session('sucess')}}</strong> 
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-      @endif
-
       @if($carts->where('user_id', '=',auth()->user()->id)->count() == 0)
         <div class="alert alert-primary">
           Currently you have no items in cart.
@@ -49,13 +40,29 @@
                                   </td>
                                   <td style="border: none">
                                     <span class="cart-delete ml-2">
-                                      <form action="{{route('carts.destroy',$cart->id)}}" method="post">
-                                        @csrf
-                                        @method('delete')
-                                        <button type="submit" style="background-color: transparent; border:none">
-                                          <i class="fas fa-trash"></i></a>
+                                        <button type="submit" id="p_delete" style="background-color: transparent; border:none">
+                                          <i class="fas fa-trash"></i>
                                         </button>
-                                      </form>
+
+                                        <script>
+                                          $(function(){
+                                            $('#p_delete').click(function() {
+                                                $.ajax({
+                                                  url: '{{route('carts.destroy',$cart->id)}}',
+                                                  type: 'DELETE',
+                                                  data: { 
+                                                    "_token": "{{ csrf_token() }}",
+                                                  },
+                                                  success: function(response) {
+                                                    // location.reload();
+                                                  },
+                                                  error: function (response) {
+                                                    window.location.reload()
+                                                  }
+                                                });
+                                              });
+                                          }); 
+                                        </script>
                                    </span>
                                   </td>
                                 </tr>
@@ -120,9 +127,17 @@
                                   'city' : $('#city').val(),
                                   'tol': $('#tol').val(),
                                   'phone': $('#phone').val(),
-                                  'cart_id': {{$cart->id}},
+                                  'product_id': {{$cart->product_id}},
+                                  'size': '{{$cart->size}}',
+                                  'color': '{{$cart->color}}',
+                                  'quantity': {{$cart->quantity}},
+                                  'totalprice': {{$cart->quantity * $cart->product->price}},
                                 },
+                                success: function(response){
+                                  alert('Your order has been placed');
+                                }
                               });
+                              
                             });
                         }); 
 
@@ -143,7 +158,6 @@
                               });
                             });
                         }); 
-
                         
                       </script>
                     @endif

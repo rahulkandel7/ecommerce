@@ -108,6 +108,6 @@ class CartController extends Controller
     {
         $cart->delete();
 
-        return redirect(route('carts.index'))->with('sucess', 'Your products has been placed');
+        return redirect(route('carts.index'));
     }
 }

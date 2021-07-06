@@ -1,13 +1,16 @@
-@extends('layouts.app')
+@extends('layouts.admin.app')
+
+@section('title')
+    {{$category->name}}
+@endsection
 
 @section('content')
     <div class="container">
         <div class="row mt-4 mb-4">
             <div class="col-lg-12">
-                <div class="card">
+                <div class="card shadow mb-4 border-left-secondary">
                     <div class="card-header">
-                        All Categories
-                        <a href="{{ route('admin.categories.index') }}" class="btn btn-primary btn-sm float-right"> Go Back </a>
+                        <a href="{{ route('admin.categories.index') }}" class="btn btn-primary float-right"> Go Back </a>
                     </div>
                     <div class="card-body">
                         <table class="table">

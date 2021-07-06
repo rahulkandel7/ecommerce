@@ -38,6 +38,7 @@ Route::resource('carts', App\Http\Controllers\CartController::class)->middleware
 
 Route::resource('orders', App\Http\Controllers\OrderController::class)->middleware('auth');
 
+Route::get('/dashboard', [App\Http\Controllers\Admin\AdminController::class, 'index'])->name('dashboard')->middleware('isAdmin', 'auth')->prefix('admin');
 Route::middleware('auth', 'isAdmin')->prefix('admin')->name('admin.')->group(function () {
     Route::resource('categories', App\Http\Controllers\Admin\CategoryController::class);
     Route::resource('products', App\Http\Controllers\Admin\ProductController::class);

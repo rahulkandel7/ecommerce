@@ -63,7 +63,7 @@
                           </li>
                           @if(auth()->user() && auth()->user()->role == "Admin")
                           <li class="nav-item">
-                            <a class="nav-link" href="{{ route('admin.categories.index') }}">Categories</a>
+                            <a class="nav-link {{ Route::currentRouteNamed('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}">Dashboard</a>
                           </li>
                           @endif
                           

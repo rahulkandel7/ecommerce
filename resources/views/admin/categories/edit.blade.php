@@ -1,14 +1,20 @@
-@extends('layouts.app')
+@extends('layouts.admin.app')
+
+@section('title')
+    Update Category
+@endsection
 
 @section('content')
     <div class="container">
         <div class="row mt-4 mb-4">
             <div class="col-lg-12">
-                <div class="card">
-                    <div class="card-header">
-                        Update Categories
-                        <a href="{{ route('admin.categories.index') }}" class="btn btn-danger btn-sm float-right"> Go Back </a>
-                    </div>
+                <div class="card shadow mb-4 border-left-secondary">
+                    <div class="card-header py-3 ">
+                        <h6 class="m-0 font-weight-bold text-primary d-inline" >
+                          Update Category
+                          <a href="{{ route('admin.categories.index') }}" class="btn btn-danger btn-sm float-right"> Go Back </a>
+                        </h6>
+                      </div>
                     <div class="card-body">
                         <form action="{{ route('admin.categories.update',$category) }}" method="post">
                             @csrf

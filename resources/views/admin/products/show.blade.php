@@ -1,12 +1,16 @@
-@extends('layouts.app')
+@extends('layouts.admin.app')
+
+@section('title')
+    {{$product->name}}
+@endsection
 
 @section('content')
     <div class="container">
         <div class="row mt-4 mb-4">
             <div class="col-lg-12">
-                <div class="card">
+                <div class="card shadow mb-4 border-left-secondary">
                     <div class="card-header">
-                        <a href="{{ route('admin.products.index') }}" class="btn btn-primary btn-sm float-right"> Go Back </a>
+                        <a href="{{ route('admin.products.index') }}" class="btn btn-primary float-right"> Go Back </a>
                     </div>
                     <div class="card-body">
                         <h1>{{$product->name}}</h1>
@@ -33,6 +37,18 @@
                             <tr>
                                 <th>Product Avaibility</th>
                                 <td>{{ $product->isStock ? 'Yes' : 'No' }}</td>
+                                
+                            </tr>
+
+                            <tr>
+                                <th>Product Size</th>
+                                <td>{{ $product->sizes}}</td>
+                                
+                            </tr>
+
+                            <tr>
+                                <th>Product Color</th>
+                                <td>{{ $product->colors}}</td>
                                 
                             </tr>
 

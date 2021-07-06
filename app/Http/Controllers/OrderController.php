@@ -37,11 +37,17 @@ class OrderController extends Controller
     {
         $data = $request->validate([
             'user_id' => 'required',
-            'cart_id' => 'required',
             'city' => 'required',
             'tol' => 'required',
-            'phone' => 'required'
+            'phone' => ['integer', 'digits:10'],
+            'product_id' => 'required',
+            'size' => 'required',
+            'status' => 'nullable',
+            'quantity' => 'required',
+            'color' => 'required',
+            'totalprice' => 'required',
         ]);
+        
 
         Order::create($data);
     }

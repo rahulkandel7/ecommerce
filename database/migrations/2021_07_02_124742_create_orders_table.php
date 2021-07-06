@@ -19,7 +19,12 @@ class CreateOrdersTable extends Migration
             $table->string('tol');
             $table->string('phone');
             $table->foreignId('user_id')->constrained();
-            $table->foreignId('cart_id');
+            $table->string('status')->default('pending');
+            $table->string('product_id')->constrained();
+            $table->string('size');
+            $table->string('color');
+            $table->integer('quantity');
+            $table->integer('totalprice');
             $table->timestamps();
         });
     }

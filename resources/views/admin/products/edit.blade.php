@@ -1,4 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.admin.app')
+
+@section('title')
+    Update Product
+@endsection
 
 @section('content')
     <div class="container">
@@ -11,10 +15,12 @@
                 </div>
               @endif
 
-                <div class="card">
-                    <div class="card-header">
+                <div class="card shadow mb-4 border-left-secondary">
+                    <div class="card-header py-3 ">
+                      <h6 class="m-0 font-weight-bold text-primary d-inline" >
                         Update Product
                         <a href="{{ route('admin.products.index') }}" class="btn btn-danger btn-sm float-right"> Go Back </a>
+                      </h6>
                     </div>
                     <div class="card-body">
                         <form action="{{ route('admin.products.update', $product) }}" method="post" enctype="multipart/form-data">
@@ -159,7 +165,7 @@
 
                             
 
-                            <input type="submit" value="Save" class="btn btn-outline-primary">
+                            <input type="submit" value="Update" class="btn btn-outline-primary">
                         </form>
                     </div>
                 </div>

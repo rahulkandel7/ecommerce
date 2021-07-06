@@ -14,6 +14,16 @@ class Order extends Model
         'tol',
         'phone',
         'user_id',
-        'cart_id',
+        'product_id',
+        'status',
+        'size',
+        'color',
+        'quantity',
+        'totalprice',
     ];
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
 }
