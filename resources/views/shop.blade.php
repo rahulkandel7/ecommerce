@@ -131,7 +131,7 @@
   @if ($products->count() == 0)
     <div class="alert alert-primary">
       <p class="mb-0">
-        No Product available in these price range.
+        No Product available.
       </p>
     </div> 
   @endif

@@ -52,9 +52,16 @@
               <h1 class="ml-4">Women</h1>
           </div>
           <div class="banner-overlay container">
+            
+            <form action="{{route('women')}}" method="get">
               <div class="banner-link">
-                <a href="">Shop Now</a>
+                <button type="submit" class="product-link" name="search" value="female">
+                  Shop Now
+                 </button>
+                
               </div>
+              
+             </form>
           </div>
         </div>
     </div>
@@ -65,9 +72,16 @@
           <h1 class="ml-4">Men</h1>
         </div>
         <div class="banner-overlay container">
-          <div class="banner-link">
-            <a href="">Shop Now</a>
-          </div>
+          <form action="{{route('men')}}" method="get">
+            <div class="banner-link">
+              <button type="submit" class="product-link" name="search" value="male">
+                Shop Now
+               </button>
+              
+            </div>
+            
+           </form>
+          
       </div>
       </div>
     </div>

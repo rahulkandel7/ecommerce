@@ -105,8 +105,10 @@
     animation-iteration-count: 1;
 }
 
-.banner-link a{
+.banner-link button{
     color: white;
+    font-size: 1.3rem;
+    text-decoration: underline;
 }
 
 .banner:hover .banner-link{
