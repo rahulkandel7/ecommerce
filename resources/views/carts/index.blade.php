@@ -133,9 +133,6 @@
                                   'quantity': {{$cart->quantity}},
                                   'totalprice': {{$cart->quantity * $cart->product->price}},
                                 },
-                                success: function(response){
-                                  alert('Your order has been placed');
-                                }
                               });
                               
                             });

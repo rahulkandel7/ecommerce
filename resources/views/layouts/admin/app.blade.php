@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    @yield('meta')
     <title>@yield('title')</title>
 
     <!-- Custom fonts for this template-->
@@ -60,7 +60,7 @@
                     <span>Categories</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{route('admin.orders.index')}}">
                     <i class="fas fa-file-invoice-dollar"></i>
                     <span>Orders</span></a>
             </li>

@@ -42,4 +42,5 @@ Route::get('/dashboard', [App\Http\Controllers\Admin\AdminController::class, 'in
 Route::middleware('auth', 'isAdmin')->prefix('admin')->name('admin.')->group(function () {
     Route::resource('categories', App\Http\Controllers\Admin\CategoryController::class);
     Route::resource('products', App\Http\Controllers\Admin\ProductController::class);
+    Route::resource('orders', App\Http\Controllers\Admin\OrderController::class);
 });
