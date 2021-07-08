@@ -63,7 +63,7 @@
                     <span>Orders</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="{{route('admin.users.index')}}">
                     <i class="fas fa-user"></i>
                     <span>Customers</span></a>
             </li>

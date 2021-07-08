@@ -43,8 +43,10 @@ Route::middleware('auth', 'isAdmin')->prefix('admin')->name('admin.')->group(fun
     Route::resource('categories', App\Http\Controllers\Admin\CategoryController::class);
     Route::resource('products', App\Http\Controllers\Admin\ProductController::class);
     Route::resource('orders', App\Http\Controllers\Admin\OrderController::class);
+    Route::resource('users', App\Http\Controllers\Admin\UserController::class);
 });
 
 Route::get('/totalOrder', [App\Http\Controllers\Admin\OrderController::class, 'totalOrder'])->name('totalOrder')->prefix('admin/order');
 Route::get('/product/search', [App\Http\Controllers\Admin\ProductController::class, 'search'])->name('admin.product.search')->prefix('admin');
 Route::get('/category/search', [App\Http\Controllers\Admin\CategoryController::class, 'search'])->name('admin.category.search')->prefix('admin');
+Route::get('/user/search', [App\Http\Controllers\Admin\UserController::class, 'search'])->name('admin.user.search')->prefix('admin');
