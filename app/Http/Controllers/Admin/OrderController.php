@@ -63,7 +63,7 @@ class OrderController extends Controller
      */
     public function edit(Order $order)
     {
-        //
+        return view('admin.orders.edit', compact('order'));
     }
 
     /**
@@ -75,7 +75,14 @@ class OrderController extends Controller
      */
     public function update(Request $request, Order $order)
     {
-        //
+        // @dd($request->all());
+        $data = $request->validate([
+            'status' => 'required',
+        ]);
+
+        $order->update($data);
+
+        return redirect(route('admin.orders.index'));
     }
 
     /**
@@ -86,6 +93,17 @@ class OrderController extends Controller
      */
     public function destroy(Order $order)
     {
-        //
+        $order->delete();
+
+        return redirect(route('admin.orders.index'));
     }
+
+    public function totalOrder()
+    {
+        $orders = Order::all();
+        $total = Order::count();
+        $totalOrders = Order::paginate(10);
+        return view('admin.orders.totalOrder', compact('orders', 'total', 'totalOrders'));
+    }
+
 }

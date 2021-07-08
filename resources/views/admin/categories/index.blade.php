@@ -33,7 +33,23 @@
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary d-inline">
                 All Categories
-                <a href="{{ route('admin.categories.create') }}" class="btn btn-primary btn-sm float-right"> Create </a>
+
+                <div class="float-right d-inline">
+                    <!-- Topbar Search -->
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" method="get" action="{{route('admin.category.search')}}">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." value="{{request('q')}}"
+                                aria-label="Search" aria-describedby="basic-addon2" name="q">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <a href="{{ route('admin.categories.create') }}" class="btn btn-primary btn-sm ml-4"> Create </a>
+                </div>
             </h6>
             
         </div>

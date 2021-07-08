@@ -12,13 +12,13 @@
 <div class="container-fluid">
     <div class="row">
         <!-- Total Order Card Example -->
-        <div class="col-xl-3 col-md-6 mb-4">
+        <div class="col-xl-3 col-md-6 mb-4" >
             <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Total Orders</div>
+                                <a href="{{route('totalOrder')}}">Total Orders </a></div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{$total}}</div>
                         </div>
                         <div class="col-auto">
@@ -35,7 +35,7 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                            <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">
                                 Today Orders</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{$totalTodayOrder}}</div>
                         </div>
@@ -53,7 +53,7 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
                                 Today Revenue</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">
                                 @php
@@ -61,9 +61,11 @@
                                 @endphp
 
                                 @for ($i = 0; $i < $todayOrders->count(); $i++)
-                                    @php
-                                        $totalRevenue = $totalRevenue + $todayOrders[$i]->totalprice;
-                                    @endphp
+                                    @if($todayOrders[$i]->status == 'delivered')
+                                        @php
+                                            $totalRevenue = $totalRevenue + $todayOrders[$i]->totalprice;
+                                        @endphp
+                                    @endif
                                 @endfor
                                     
 
@@ -108,6 +110,7 @@
                     </thead>
                     <tbody>
                         <tr>
+                            
                             @foreach ($todayOrders as $todayOrder)
                                 <tr>
                                     <td>{{ $todayOrder->id }}</td>
@@ -119,16 +122,21 @@
                                     <td>{{ $todayOrder->totalprice }}</td>
                                     <td>{{ $todayOrder->city }}, {{$todayOrder->tol}}</td>
                                     <td>{{ $todayOrder->phone }}</td>
-                                    <td>{{ $todayOrder->status }}</td>
+                                    <td>
+                                        <div class="card p-2 shadow" style='@if($todayOrder->status == 'pending') color:white; background:#f6c23e; @elseif($todayOrder->status == 'cancled') color:white; background:#e74a3b;  @elseif($todayOrder->status == 'processing') color:white; background:#36b9cc; @else color:white; background:#1cc88a; @endif'>
+                                            {{ $todayOrder->status }}
+                                        </div>
+                                    </td>
 
                                     <td>
-                                        {{-- <a href="{{ route('admin.categories.show',$category) }}" class="btn btn-outline-primary">Show</a>
-                                        <a href="{{ route('admin.categories.edit',$category) }}" class="btn btn-outline-secondary">Edit</a>
-                                        <form action="{{ route('admin.categories.destroy',$category) }}" method="post" class="d-inline">
+                                        <a href="{{ route('admin.orders.edit',$todayOrder) }}" class="btn btn-outline-primary btn-sm"><i class="far fa-edit"></i></a>
+                                        {{-- <form action="{{ route('admin.categories.destroy',$category) }}" method="post" class="d-inline">
                                             @csrf
-                                            @method('delete') --}}
-                                            <input type="submit" value="Delete" class="btn btn-outline-danger">
-                                        {{-- </form> --}}
+                                            @method('delete')
+                                            <button type="submit" class="btn btn-sm btn-outline-danger">
+                                                <i class="far fa-trash-alt"></i>
+                                            </button>
+                                        </form> --}}
                                     </td>
                                 </tr>
                             @endforeach
@@ -140,7 +148,7 @@
         </div>
     </div>
 
-    <!-- Total Orders -->
+    {{-- <!-- Total Orders -->
     <div class="card shadow mb-4 border-bottom-primary">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary d-inline">
@@ -179,16 +187,19 @@
                                     <td>{{ $totalOrder->totalprice }}</td>
                                     <td>{{ $totalOrder->city }}, {{$totalOrder->tol}}</td>
                                     <td>{{ $totalOrder->phone }}</td>
-                                    <td>{{ $totalOrder->status }}</td>
+                                    <td>
+                                        <div class="card p-2 shadow" style='@if($totalOrder->status == 'pending') color:white; background:#f6c23e; @elseif($totalOrder->status == 'cancled') color:white; background:#e74a3b;  @elseif($totalOrder->status == 'processing') color:white; background:#36b9cc; @else color:white; background:#1cc88a; @endif'>
+                                            {{ $totalOrder->status }}
+                                        </div>
+                                    </td>
 
                                     <td>
-                                        {{-- <a href="{{ route('admin.categories.show',$category) }}" class="btn btn-outline-primary">Show</a>
-                                        <a href="{{ route('admin.categories.edit',$category) }}" class="btn btn-outline-secondary">Edit</a>
-                                        <form action="{{ route('admin.categories.destroy',$category) }}" method="post" class="d-inline">
+                                        
+                                        <form action="{{ route('admin.orders.destroy',$totalOrder) }}" method="post" class="d-inline">
                                             @csrf
-                                            @method('delete') --}}
+                                            @method('delete')
                                             <input type="submit" value="Delete" class="btn btn-outline-danger">
-                                        {{-- </form> --}}
+                                        </form>
                                     </td>
                                 </tr>
                             @endforeach
@@ -201,7 +212,7 @@
                 {{ $totalOrders->links() }}
               </div>
         </div>
-    </div>
+    </div> --}}
 
 </div>
 @endsection

@@ -215,4 +215,16 @@ class ProductController extends Controller
 
         return redirect(route('admin.products.index'))->with('sucess', 'Product Deleted Sucessfully');
     }
+
+    public function search(Request $request)
+    {
+        // @dd($request->all());
+        $search = $request->q;
+        $total = Product::count();
+
+        $products = Product::where('name', 'like', "%$search%")->paginate(20);
+
+        return view('admin.products.index', compact('products', 'total'));
+
+    }
 }

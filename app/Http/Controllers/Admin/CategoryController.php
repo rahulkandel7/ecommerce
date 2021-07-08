@@ -101,4 +101,16 @@ class CategoryController extends Controller
 
         return redirect(route('admin.categories.index'))->with('sucess', 'category deleted sucessfully');
     }
+
+    public function search(Request $request)
+    {
+        // @dd($request->all());
+        $search = $request->q;
+        $total = Category::count();
+
+        $categories = Category::where('name', 'like', "%$search%")->paginate(20);
+
+        return view('admin.categories.index', compact('categories', 'total'));
+
+    }
 }

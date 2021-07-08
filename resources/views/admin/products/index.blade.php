@@ -33,7 +33,23 @@
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary d-inline">
                 All Products
-                <a href="{{ route('admin.products.create') }}" class="btn btn-primary btn-sm float-right"> Create </a>
+
+                <div class="float-right d-inline">
+                    <!-- Topbar Search -->
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search" method="get" action="{{route('admin.product.search')}}">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." value="{{request('q')}}"
+                                aria-label="Search" aria-describedby="basic-addon2" name="q">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <a href="{{ route('admin.products.create') }}" class="btn btn-primary btn-sm ml-4"> Create </a>
+                </div>
             </h6>
             
         </div>
@@ -66,12 +82,14 @@
                             <td>{{ $product->isStock ? 'Yes' : 'No' }}</td>
                             <td>{{ $product->category->name}}</td>
                             <td>
-                                <a href="{{ route('admin.products.show',$product) }}" class="btn btn-outline-primary">Show</a>
-                                <a href="{{ route('admin.products.edit',$product) }}" class="btn btn-outline-secondary">Edit</a>
+                                <a href="{{ route('admin.products.show',$product) }}" class="btn btn-outline-primary"><i class="fas fa-eye"></i></a>
+                                <a href="{{ route('admin.products.edit',$product) }}" class="btn btn-outline-secondary"><i class="fas fa-edit"></i></a>
                                 <form action="{{ route('admin.products.destroy',$product) }}" method="post" class="d-inline">
                                     @csrf
                                     @method('delete')
-                                    <input type="submit" value="Delete" class="btn btn-outline-danger">
+                                    <button type="submit" class="btn btn-outline-danger">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
                                 </form>
                             </td>
                         </tr>
