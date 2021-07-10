@@ -1,14 +1,20 @@
-## Ecommerce Project
-# This is simple ecommerce project
 
-# DataBase
-#### DB_DATABASE=ecommerce
-#### DB_USERNAME=root
-#### DB_PASSWORD=pass
+# Ecommerce Project (Dress Shoppping)
 
-# php artisan migrate:fresh --seed for seeding
+## Project Setup
 
-## Routes -> Completed
+* First Setup Database <br>
+ `
+    DB_CONNECTION=mysql
+    DB_HOST=localhost
+    DB_PORT=3306
+    DB_DATABASE=ecommerce
+    DB_USERNAME=root
+    DB_PASSWORD= 
+`
 
+* After setting database. Now run this line in terminal 
 
-## Login and Register page also Editied
+    ` php artisan migrate:fresh --seed`
+
+* Now run 
