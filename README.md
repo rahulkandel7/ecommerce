@@ -5,11 +5,11 @@
 
 * First Setup Database <br>
  `
-    DB_CONNECTION=mysql
-    DB_HOST=localhost
-    DB_PORT=3306
-    DB_DATABASE=ecommerce
-    DB_USERNAME=root
+    DB_CONNECTION=mysql `<br>`
+    DB_HOST=localhost `<br>`
+    DB_PORT=3306 `<br>`
+    DB_DATABASE=ecommerce `<br>`
+    DB_USERNAME=root `<br>`
     DB_PASSWORD= 
 `
 
